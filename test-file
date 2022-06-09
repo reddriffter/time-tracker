@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - sources: /
+    destination: /var/www/html/wordpress
+hooks:
+  BeforeInstall:
+	  -location: script/install_dependencies.sh
+		 timeout: 300
+		 runas: root
